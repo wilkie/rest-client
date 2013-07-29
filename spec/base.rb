@@ -1,3 +1,9 @@
+require 'simplecov'
+SimpleCov.start do
+  add_filter 'bundled_gems/'
+  add_filter 'spec/'
+end
+
 def is_ruby_19?
   RUBY_VERSION > '1.9'
 end
