@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gemspec
 
-group :test do
-  gem 'rake'
+group :development, :test do
+  gem 'devtools', git: 'https://github.com/rom-rb/devtools.git'
+  eval_gemfile 'Gemfile.devtools'
 end
