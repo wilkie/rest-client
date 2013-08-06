@@ -56,3 +56,5 @@ ConstantName:
 # Not all trivial readers/writers can be defined with attr_* methods
 TrivialAccessors:
   Enabled: false
+
+inherit_from: rubocop-todo.yml
