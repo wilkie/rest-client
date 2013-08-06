@@ -1,8 +1,9 @@
-require File.join( File.dirname(File.expand_path(__FILE__)), '../spec_helper')
+require 'spec_helper'
 
 describe RestClient::Request do
   describe "ssl verification" do
     it "is successful with the correct ca_file" do
+      WebMock.allow_net_connect!
       request = RestClient::Request.new(
         :method => :get,
         :url => 'https://www.mozilla.com',
@@ -10,6 +11,7 @@ describe RestClient::Request do
         :ssl_ca_file => File.join(File.dirname(__FILE__), "certs", "equifax.crt")
       )
       expect { request.execute }.to_not raise_error
+      WebMock.disable_net_connect!
     end
 
     # I don' think this feature is useful anymore (under 1.9.3 at the very least).
@@ -23,6 +25,7 @@ describe RestClient::Request do
     #
     # also see https://github.com/ruby/ruby/blob/trunk/ext/openssl/ossl.c#L237
     it "is unsuccessful with an incorrect ca_file" do
+      WebMock.allow_net_connect!
       request = RestClient::Request.new(
         :method => :get,
         :url => 'https://www.mozilla.com',
@@ -30,6 +33,7 @@ describe RestClient::Request do
         :ssl_ca_file => File.join(File.dirname(__FILE__), "certs", "verisign.crt")
       )
       expect { request.execute }.to raise_error(RestClient::SSLCertificateNotVerified)
+      WebMock.disable_net_connect!
     end
   end
 end

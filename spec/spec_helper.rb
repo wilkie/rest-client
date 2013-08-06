@@ -3,4 +3,5 @@ def is_ruby_19?
 end
 
 require 'devtools/spec_helper'
+require 'webmock/rspec'
 require 'restclient'
