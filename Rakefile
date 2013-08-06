@@ -9,19 +9,6 @@ Devtools.init_rake_tasks
 
 require "rspec/core/rake_task"
 
-desc "Run all specs"
-task :spec => ["spec:unit", "spec:integration"]
-
-desc "Run unit specs"
-RSpec::Core::RakeTask.new('spec:unit') do |t|
-  t.pattern = 'spec/unit/*_spec.rb'
-end
-
-desc "Run integration specs"
-RSpec::Core::RakeTask.new('spec:integration') do |t|
-  t.pattern = 'spec/integration/*_spec.rb'
-end
-
 desc "Print specdocs"
 RSpec::Core::RakeTask.new(:doc) do |t|
   t.rspec_opts = ["--format", "specdoc", "--dry-run"]
