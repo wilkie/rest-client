@@ -32,7 +32,6 @@ describe RestClient::Request do
       RestClient::Request.decode('gzip', nil).should be_nil
     end
 
-
     it "decodes a gzip body" do
       RestClient::Request.decode('gzip', "\037\213\b\b\006'\252H\000\003t\000\313T\317UH\257\312,HM\341\002\000G\242(\r\v\000\000\000").should == "i'm gziped\n"
     end
@@ -315,7 +314,6 @@ describe RestClient::Request do
       @request.net_http_class.proxy_class?.should be_false
     end
   end
-
 
   describe "logging" do
     it "logs a get request" do

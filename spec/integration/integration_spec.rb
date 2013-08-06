@@ -31,5 +31,4 @@ describe RestClient do
     end
   end
 
-
 end

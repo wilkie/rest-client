@@ -41,9 +41,6 @@ DefWithoutParentheses:
 DotPosition:
   Enabled: false
 
-EmptyLines:
-  Enabled: false
-
 Encoding:
   Enabled: false
 
@@ -111,12 +108,6 @@ SpaceInsideParens:
   Enabled: false
 
 StringLiterals:
-  Enabled: false
-
-Tab:
-  Enabled: false
-
-TrailingWhitespace:
   Enabled: false
 
 UnlessElse:

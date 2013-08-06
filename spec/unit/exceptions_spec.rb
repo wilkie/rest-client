@@ -5,14 +5,14 @@ describe RestClient::Exception do
     e = RestClient::Exception.new
     e.message.should == "RestClient::Exception"
   end
-  
+
   it "returns the 'message' that was set" do
     e = RestClient::Exception.new
     message = "An explicitly set message"
     e.message = message
     e.message.should == message
   end
-  
+
   it "sets the exception message to ErrorMessage" do
     RestClient::ResourceNotFound.new.message.should == 'Resource Not Found'
   end
