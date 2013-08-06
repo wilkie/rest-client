@@ -18,8 +18,8 @@ describe RestClient::Request do
     #
     # Exceptions in verify_callback are ignored; RestClient has to catch OpenSSL::SSL::SSLError
     # and either re-throw it as is, or throw SSLCertificateNotVerified
-    # based on the contents of the message field of the original exception
-    #.
+    # based on the contents of the message field of the original exception.
+    #
     # The client has to handle OpenSSL::SSL::SSLError exceptions anyway,
     # why make them handle both OpenSSL *AND* RestClient exceptions???
     #

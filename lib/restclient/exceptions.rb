@@ -2,7 +2,7 @@ module RestClient
 
   STATUSES = {100 => 'Continue',
               101 => 'Switching Protocols',
-              102 => 'Processing', #WebDAV
+              102 => 'Processing', # WebDAV
 
               200 => 'OK',
               201 => 'Created',
@@ -11,7 +11,7 @@ module RestClient
               204 => 'No Content',
               205 => 'Reset Content',
               206 => 'Partial Content',
-              207 => 'Multi-Status', #WebDAV
+              207 => 'Multi-Status', # WebDAV
 
               300 => 'Multiple Choices',
               301 => 'Moved Permanently',
@@ -42,13 +42,13 @@ module RestClient
               417 => 'Expectation Failed',
               418 => 'I\'m A Teapot',
               421 => 'Too Many Connections From This IP',
-              422 => 'Unprocessable Entity', #WebDAV
-              423 => 'Locked', #WebDAV
-              424 => 'Failed Dependency', #WebDAV
-              425 => 'Unordered Collection', #WebDAV
+              422 => 'Unprocessable Entity', # WebDAV
+              423 => 'Locked', # WebDAV
+              424 => 'Failed Dependency', # WebDAV
+              425 => 'Unordered Collection', # WebDAV
               426 => 'Upgrade Required', 
-              449 => 'Retry With', #Microsoft
-              450 => 'Blocked By Windows Parental Controls', #Microsoft
+              449 => 'Retry With', # Microsoft
+              450 => 'Blocked By Windows Parental Controls', # Microsoft
 
               500 => 'Internal Server Error',
               501 => 'Not Implemented',
@@ -57,8 +57,8 @@ module RestClient
               504 => 'Gateway Timeout',
               505 => 'HTTP Version Not Supported',
               506 => 'Variant Also Negotiates',
-              507 => 'Insufficient Storage', #WebDAV
-              509 => 'Bandwidth Limit Exceeded', #Apache
+              507 => 'Insufficient Storage', # WebDAV
+              509 => 'Bandwidth Limit Exceeded', # Apache
               510 => 'Not Extended'}
 
   # Compatibility : make the Response act like a Net::HTTPResponse when needed
